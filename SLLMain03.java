@@ -25,14 +25,23 @@ public class SLLMain03 {
             double ipk = sc.nextDouble();
             sc.nextLine();
 
-            Mahasiswa03 mhs = new Mahasiswa03(nama, nim, kelas, ipk);
+            Mahasiswa03 mhs = new Mahasiswa03(nim, nama, kelas, ipk);
 
             sll.addLast(mhs);
         }
 
+        System.out.println("data index 1: ");
+        sll.getData(1);
+        System.out.println("data mahasiswa an Bimon berada pada index : "+sll.indexOf("bimon"));
         System.out.println();
+
+        sll.removeFirst();
+        sll.removeLast();
+        sll.print();
+        sll.removeAt(0);
         sll.print();
 
         sc.close();
     }
 }
+ 
